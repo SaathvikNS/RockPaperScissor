@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPC</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+    </style>
+</head>
+<body id="body" onload="animate()">
+    <div class="wrapper">
+        <div class="aniwrapper">
+            <div id="computer">
+                <svg id="crock" fill="#353535" class="crock" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 1792 1792" id="hand"><path d="M896 384q-53 0-90.5 37.5T768 512v128h-32v-93q0-48-32-81.5T624 432q-46 0-79 33t-33 79v429l-32-30V771q0-48-32-81.5T368 656q-46 0-79 33t-33 79v224q0 47 35 82l310 296q39 39 39 102 0 26 19 45t45 19h640q26 0 45-19t19-45v-25q0-41 10-77l108-436q10-36 10-77V611q0-48-32-81.5t-80-33.5q-46 0-79 33t-33 79v32h-32V515q0-40-25-72.5t-64-40.5q-14-2-23-2-46 0-79 33t-33 79v128h-32V518q0-51-32.5-89.5T909 385q-5-1-13-1zm0-128q84 0 149 50 57-34 123-34 59 0 111 27t86 76q27-7 59-7 100 0 170 71.5t70 171.5v246q0 51-13 108l-109 436q-6 24-6 71 0 80-56 136t-136 56H704q-84 0-138-58.5T512 1463l-308-296q-76-73-76-175V768q0-99 70.5-169.5T368 528q11 0 16 1 6-95 75.5-160T624 304q52 0 98 21 72-69 174-69z"></path></svg>
+                <svg id="cpaper" fill="#353535" class="cpaper" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 1792 1792" id="hand"><path d="M880 128q-46 0-79 33t-33 79v656h-32V368q0-46-33-79t-79-33-79 33-33 79v784L358 947q-38-51-102-51-53 0-90.5 37.5T128 1024q0 43 26 77l384 512q38 51 102 51h688q34 0 61-22t34-56l76-405q5-32 5-59V624q0-46-33-79t-79-33-79 33-33 79v272h-32V368q0-46-33-79t-79-33-79 33-33 79v528h-32V240q0-46-33-79t-79-33zm0-128q68 0 125.5 35.5T1094 132q19-4 42-4 99 0 169.5 70.5T1376 368v17q105-6 180.5 64t75.5 175v498q0 40-8 83l-76 404q-14 79-76.5 131t-143.5 52H640q-60 0-114.5-27.5T435 1690L51 1178q-51-68-51-154 0-106 75-181t181-75q78 0 128 34V368q0-99 70.5-169.5T624 128q23 0 42 4 31-61 88.5-96.5T880 0z"></path></svg>
+                <svg id="cscissor" fill="#353535" class="cscissor" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 1792 1792" id="hand"><path d="M1073 1664H896q-163 0-226-141-23-49-23-102v-5q-62-30-98.5-88.5T512 1200q0-38 5-48H256q-106 0-181-75T0 896t75-181 181-75h113l-44-17q-74-28-119.5-93.5T160 384q0-106 75-181t181-75q46 0 91 17l628 239h401q106 0 181 75t75 181v668q0 88-54 157.5t-140 90.5l-339 85q-92 23-186 23zm-49-711-155 71-163 74q-30 14-48 41.5t-18 60.5q0 46 33 79t79 33q26 0 46-10l338-154q-49-10-80.5-50t-31.5-90v-55zm320 311q0-46-33-79t-79-33q-26 0-46 10l-290 132q-28 13-37 17t-30.5 17-29.5 23.5-16 29-8 40.5q0 50 31.5 82t81.5 32q20 0 38-9l352-160q30-14 48-41.5t18-60.5zm-232-752L462 264q-24-8-46-8-53 0-90.5 37.5T288 384q0 40 22.5 73t59.5 47l526 200v64H256q-53 0-90.5 37.5T128 896t37.5 90.5T256 1024h535l233-106V720q0-63 46-106l111-102h-69zm-39 1024q82 0 155-19l339-85q43-11 70-45.5t27-78.5V640q0-53-37.5-90.5T1536 512h-308l-136 126q-36 33-36 82v296q0 46 33 77t79 31 79-35 33-81V800h32v208q0 70-57 114 52 8 86.5 48.5t34.5 93.5q0 42-23 78t-61 53l-310 141h91z"></path></svg>
+            </div>
+            <div id="user">
+                <svg id="urock" fill="#353535" class="urock" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 1792 1792" id="hand"><path d="M896 384q-53 0-90.5 37.5T768 512v128h-32v-93q0-48-32-81.5T624 432q-46 0-79 33t-33 79v429l-32-30V771q0-48-32-81.5T368 656q-46 0-79 33t-33 79v224q0 47 35 82l310 296q39 39 39 102 0 26 19 45t45 19h640q26 0 45-19t19-45v-25q0-41 10-77l108-436q10-36 10-77V611q0-48-32-81.5t-80-33.5q-46 0-79 33t-33 79v32h-32V515q0-40-25-72.5t-64-40.5q-14-2-23-2-46 0-79 33t-33 79v128h-32V518q0-51-32.5-89.5T909 385q-5-1-13-1zm0-128q84 0 149 50 57-34 123-34 59 0 111 27t86 76q27-7 59-7 100 0 170 71.5t70 171.5v246q0 51-13 108l-109 436q-6 24-6 71 0 80-56 136t-136 56H704q-84 0-138-58.5T512 1463l-308-296q-76-73-76-175V768q0-99 70.5-169.5T368 528q11 0 16 1 6-95 75.5-160T624 304q52 0 98 21 72-69 174-69z"></path></svg>
+                <svg id="upaper" fill="#353535" class="upaper" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 1792 1792" id="hand"><path d="M880 128q-46 0-79 33t-33 79v656h-32V368q0-46-33-79t-79-33-79 33-33 79v784L358 947q-38-51-102-51-53 0-90.5 37.5T128 1024q0 43 26 77l384 512q38 51 102 51h688q34 0 61-22t34-56l76-405q5-32 5-59V624q0-46-33-79t-79-33-79 33-33 79v272h-32V368q0-46-33-79t-79-33-79 33-33 79v528h-32V240q0-46-33-79t-79-33zm0-128q68 0 125.5 35.5T1094 132q19-4 42-4 99 0 169.5 70.5T1376 368v17q105-6 180.5 64t75.5 175v498q0 40-8 83l-76 404q-14 79-76.5 131t-143.5 52H640q-60 0-114.5-27.5T435 1690L51 1178q-51-68-51-154 0-106 75-181t181-75q78 0 128 34V368q0-99 70.5-169.5T624 128q23 0 42 4 31-61 88.5-96.5T880 0z"></path></svg>
+                <svg id="uscissor" fill="#353535" class="uscissor" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 1792 1792" id="hand"><path d="M1073 1664H896q-163 0-226-141-23-49-23-102v-5q-62-30-98.5-88.5T512 1200q0-38 5-48H256q-106 0-181-75T0 896t75-181 181-75h113l-44-17q-74-28-119.5-93.5T160 384q0-106 75-181t181-75q46 0 91 17l628 239h401q106 0 181 75t75 181v668q0 88-54 157.5t-140 90.5l-339 85q-92 23-186 23zm-49-711-155 71-163 74q-30 14-48 41.5t-18 60.5q0 46 33 79t79 33q26 0 46-10l338-154q-49-10-80.5-50t-31.5-90v-55zm320 311q0-46-33-79t-79-33q-26 0-46 10l-290 132q-28 13-37 17t-30.5 17-29.5 23.5-16 29-8 40.5q0 50 31.5 82t81.5 32q20 0 38-9l352-160q30-14 48-41.5t18-60.5zm-232-752L462 264q-24-8-46-8-53 0-90.5 37.5T288 384q0 40 22.5 73t59.5 47l526 200v64H256q-53 0-90.5 37.5T128 896t37.5 90.5T256 1024h535l233-106V720q0-63 46-106l111-102h-69zm-39 1024q82 0 155-19l339-85q43-11 70-45.5t27-78.5V640q0-53-37.5-90.5T1536 512h-308l-136 126q-36 33-36 82v296q0 46 33 77t79 31 79-35 33-81V800h32v208q0 70-57 114 52 8 86.5 48.5t34.5 93.5q0 42-23 78t-61 53l-310 141h91z"></path></svg>
+            </div>
+        </div>
+        <p id="announcement">Start Game!</p>
+        <div class="selector">
+            <svg id="srock" fill="#787878" class="srock item1" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 1792 1792" id="hand"><path d="M896 384q-53 0-90.5 37.5T768 512v128h-32v-93q0-48-32-81.5T624 432q-46 0-79 33t-33 79v429l-32-30V771q0-48-32-81.5T368 656q-46 0-79 33t-33 79v224q0 47 35 82l310 296q39 39 39 102 0 26 19 45t45 19h640q26 0 45-19t19-45v-25q0-41 10-77l108-436q10-36 10-77V611q0-48-32-81.5t-80-33.5q-46 0-79 33t-33 79v32h-32V515q0-40-25-72.5t-64-40.5q-14-2-23-2-46 0-79 33t-33 79v128h-32V518q0-51-32.5-89.5T909 385q-5-1-13-1zm0-128q84 0 149 50 57-34 123-34 59 0 111 27t86 76q27-7 59-7 100 0 170 71.5t70 171.5v246q0 51-13 108l-109 436q-6 24-6 71 0 80-56 136t-136 56H704q-84 0-138-58.5T512 1463l-308-296q-76-73-76-175V768q0-99 70.5-169.5T368 528q11 0 16 1 6-95 75.5-160T624 304q52 0 98 21 72-69 174-69z"></path></svg>
+            <svg id="spaper" fill="#787878" class="spaper item2" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 1792 1792" id="hand"><path d="M880 128q-46 0-79 33t-33 79v656h-32V368q0-46-33-79t-79-33-79 33-33 79v784L358 947q-38-51-102-51-53 0-90.5 37.5T128 1024q0 43 26 77l384 512q38 51 102 51h688q34 0 61-22t34-56l76-405q5-32 5-59V624q0-46-33-79t-79-33-79 33-33 79v272h-32V368q0-46-33-79t-79-33-79 33-33 79v528h-32V240q0-46-33-79t-79-33zm0-128q68 0 125.5 35.5T1094 132q19-4 42-4 99 0 169.5 70.5T1376 368v17q105-6 180.5 64t75.5 175v498q0 40-8 83l-76 404q-14 79-76.5 131t-143.5 52H640q-60 0-114.5-27.5T435 1690L51 1178q-51-68-51-154 0-106 75-181t181-75q78 0 128 34V368q0-99 70.5-169.5T624 128q23 0 42 4 31-61 88.5-96.5T880 0z"></path></svg>
+            <svg id="sscissor" fill="#787878" class="sscissor item3" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 1792 1792" id="hand"><path d="M1073 1664H896q-163 0-226-141-23-49-23-102v-5q-62-30-98.5-88.5T512 1200q0-38 5-48H256q-106 0-181-75T0 896t75-181 181-75h113l-44-17q-74-28-119.5-93.5T160 384q0-106 75-181t181-75q46 0 91 17l628 239h401q106 0 181 75t75 181v668q0 88-54 157.5t-140 90.5l-339 85q-92 23-186 23zm-49-711-155 71-163 74q-30 14-48 41.5t-18 60.5q0 46 33 79t79 33q26 0 46-10l338-154q-49-10-80.5-50t-31.5-90v-55zm320 311q0-46-33-79t-79-33q-26 0-46 10l-290 132q-28 13-37 17t-30.5 17-29.5 23.5-16 29-8 40.5q0 50 31.5 82t81.5 32q20 0 38-9l352-160q30-14 48-41.5t18-60.5zm-232-752L462 264q-24-8-46-8-53 0-90.5 37.5T288 384q0 40 22.5 73t59.5 47l526 200v64H256q-53 0-90.5 37.5T128 896t37.5 90.5T256 1024h535l233-106V720q0-63 46-106l111-102h-69zm-39 1024q82 0 155-19l339-85q43-11 70-45.5t27-78.5V640q0-53-37.5-90.5T1536 512h-308l-136 126q-36 33-36 82v296q0 46 33 77t79 31 79-35 33-81V800h32v208q0 70-57 114 52 8 86.5 48.5t34.5 93.5q0 42-23 78t-61 53l-310 141h91z"></path></svg>
+            <p id="srocktext" class="item4">Rock</p>
+            <p id="spapertext" class="item5">Paper</p>
+            <p id="sscissortext" class="item6">Scissor</p>
+            <button id="but1" class="item7" onmouseover="tag1()" onmouseout="tag1x()"></button>
+            <button id="but2" class="item8" onmouseover="tag2()" onmouseout="tag2x()"></button>
+            <button id="but3" class="item9" onmouseover="tag3()" onmouseout="tag3x()"></button>
+        </div>
+        <p id="score">Score Board</p>
+        <table>
+            <tr>
+                <th>Computer:</th>
+                <td id="compscore">--</td>
+                <th>User:</th>
+                <td id="userscore">--</td>
+            </tr>
+        </table>
+        <div id="confetti" class="confetti"></div>
+    </div>
+    
+    <script>
+        let body = document.getElementById("body")
+        function animate() {
+            body.classList.toggle("body")
+        }
+
+        let computer
+        let user
+        let announce
+        let compscore = 0
+        let userscore = 0
+        let compdisplay = document.getElementById('compscore')
+        let userdisplay = document.getElementById('userscore')
+        let announcement = document.getElementById('announcement')
+        let confetti = document.getElementById('confetti')
+
+        function judge() {
+            console.log("computer: " + computer + "user: " + user)
+            if(computer == "rock"){
+                if(user == "rock"){
+                    announce = "draw"
+                } else if(user == "paper"){
+                    announce = "user"
+                } else {
+                    announce = "computer"
+                }
+            } else if(computer == "paper"){
+                if(user == "rock"){
+                    announce = "computer"
+                } else if(user == "paper"){
+                    announce = "draw"
+                } else {
+                    announce = "user"
+                }
+            } else {
+                if(user == "rock"){
+                    announce = "user"
+                } else if(user == "paper"){
+                    announce = "computer"
+                } else {
+                    announce = "draw"
+                }
+            }
+
+            if(announce == "user"){
+                announce = "User Won!!"
+                userscore += 1
+                announcement.style.color = "#39a6ff"
+                confetti.style.opacity = "100%"
+                setInterval(() => {
+                    confetti.style.opacity = "0%"
+                }, 2000);
+            } else if(announce == "computer") {
+                announce = "Computer Won!!"
+                compscore += 1
+                announcement.style.color = "#ff3d3d"
+            } else {
+                announce = "Draw Match!!"
+                announcement.style.color = "#44d35c"
+            }
+        }
+
+
+        let crock = document.getElementById('crock')
+        let cpaper = document.getElementById('cpaper')
+        let cscissor = document.getElementById('cscissor')
+        let sign = ["rock","paper","scissor"];
+        
+        function computerplay() {
+            computer = sign[Math.floor(Math.random() * 3)]
+            
+            if(computer == "rock"){
+                cpaper.style.display = "none";
+                cscissor.style.display = "none";
+                crock.style.display = "block";
+            } else if(computer == "paper"){
+                crock.style.display = "none";
+                cscissor.style.display = "none";
+                cpaper.style.display = "block";
+            } else {
+                cpaper.style.display = "none";
+                crock.style.display = "none";
+                cscissor.style.display = "block";
+            }
+        }
+        
+        let but1 = document.getElementById("but1")
+        let but2 = document.getElementById("but2")
+        let but3 = document.getElementById("but3")
+        
+        let urock = document.getElementById('urock')
+        let upaper = document.getElementById('upaper')
+        let uscissor = document.getElementById('uscissor')
+        
+        let companimator = document.getElementById('computer')
+        let useranimator = document.getElementById('user')
+        
+        but1.addEventListener('click', () => {
+            user = "rock"
+            companimator.classList.toggle('computer')
+            useranimator.classList.toggle('user')
+            setTimeout(() => {
+                computerplay()
+                judge()
+                upaper.style.display = "none";
+                uscissor.style.display = "none";
+                urock.style.display = "block";
+                companimator.classList.toggle('computer')
+                useranimator.classList.toggle('user')
+                announcement.innerText = announce
+                compdisplay.innerText = compscore
+                userdisplay.innerText = userscore
+            }, 1000)
+        })
+        but2.addEventListener('click', () => {
+            user = "paper"
+            companimator.classList.toggle('computer')
+            useranimator.classList.toggle('user')
+            setTimeout(() => {
+                computerplay()
+                judge()
+                urock.style.display = "none";
+                uscissor.style.display = "none";
+                upaper.style.display = "block";
+                companimator.classList.toggle('computer')
+                useranimator.classList.toggle('user')
+                announcement.innerText = announce
+                compdisplay.innerText = compscore
+                userdisplay.innerText = userscore
+            }, 1000)
+        }) 
+        but3.addEventListener('click', () => {
+            user = "scissor"
+            companimator.classList.toggle('computer')
+            useranimator.classList.toggle('user')
+            setTimeout(() => {
+                computerplay()
+                judge()
+                upaper.style.display = "none";
+                urock.style.display = "none";
+                uscissor.style.display = "block";
+                companimator.classList.toggle('computer')
+                useranimator.classList.toggle('user')
+                announcement.innerText = announce
+                compdisplay.innerText = compscore
+                userdisplay.innerText = userscore
+            }, 1000)
+        })
+
+        let srocktext = document.getElementById('srocktext')
+        let spapertext = document.getElementById('spapertext')
+        let sscissortext = document.getElementById('sscissortext')
+        let srock = document.getElementById('srock')
+        let spaper = document.getElementById('spaper')
+        let sscissor = document.getElementById('sscissor')
+        function tag1() {
+            srocktext.style.color = "#39a6ff"
+            srock.style.fill = "#39a6ff"
+        }
+        function tag1x() {
+            srocktext.style.color = "#787878"
+            srock.style.fill = "#787878"
+        }
+        function tag2() {
+            spapertext.style.color = "#39a6ff"
+            spaper.style.fill = "#39a6ff"
+        }
+        function tag2x() {
+            spapertext.style.color = "#787878"
+            spaper.style.fill = "#787878"
+        }
+        function tag3() {
+            sscissortext.style.color = "#39a6ff"
+            sscissor.style.fill = "#39a6ff"
+        }
+        function tag3x() {
+            sscissortext.style.color = "#787878"
+            sscissor.style.fill = "#787878"
+        }
+        </script>
+</body>
+</html>
